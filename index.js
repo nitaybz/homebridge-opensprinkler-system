@@ -7,6 +7,9 @@ const PromiseFinally = require('promise.prototype.finally')
 
 PromiseFinally.shim()
 
+const PLATFORM_NAME = "OpenSprinkler";
+const PLUGIN_NAME = 'homebridge-opensprinkler';
+
 module.exports = function (homebridge) {
   Accessory = homebridge.platformAccessory;
   Service = homebridge.hap.Service;
@@ -36,6 +39,10 @@ module.exports = function (homebridge) {
       this.systemPromise = System.connect()
     }
 
+    /**
+     * Homebridge calls this because it's a static plugin to retrieve all of the accessories that this plugin exposes
+     * @param next The callback handler to pass the list of AccessoryPlugin items back
+     */
     accessories(next) {
       this.systemPromise.then(
         (system) => next(system.getAccessories()),
@@ -47,7 +54,7 @@ module.exports = function (homebridge) {
     }
   }
 
-  homebridge.registerPlatform("homebridge-opensprinkler", "OpenSprinkler", SprinklerPlatform);
+  homebridge.registerPlatform(PLATFORM_NAME, SprinklerPlatform);
 
 };
 

@@ -2,9 +2,9 @@
   "name": "homebridge-opensprinkler",
   "displayName": "Open Sprinkler",
   "version": "0.2.1",
-  "description": "Control OpenSprinkler with HomeBridge",
+  "description": "Control OpenSprinkler with Homebridge",
   "license": "ISC",
-  "author": "Tim Harper <timcharper@gmail.com>",
+  "author": "Aaron Kampmeier <aaron.kampmeier@gmail.com>",
   "keywords": [
     "homebridge-plugin"
   ],

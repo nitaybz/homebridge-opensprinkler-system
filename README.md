@@ -1,3 +1,5 @@
+This is based off of the [homebridge-opensprinkler](http://github.com/timcharper/homebridge-opensprinkler) plugin originally created by Tim Charper.
+
 # OpenSprinkler
 
 "Hey Siri, turn off my sprinklers"

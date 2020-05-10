@@ -1,7 +1,7 @@
 {
   "name": "homebridge-opensprinkler-system",
   "displayName": "Open Sprinkler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Control OpenSprinkler with Homebridge",
   "license": "ISC",
   "author": "Aaron Kampmeier <aaron.kampmeier@gmail.com>",

@@ -8,7 +8,7 @@ const PromiseFinally = require('promise.prototype.finally')
 PromiseFinally.shim()
 
 const PLATFORM_NAME = "OpenSprinkler";
-const PLUGIN_NAME = 'homebridge-opensprinkler';
+const PLUGIN_NAME = 'homebridge-opensprinkler-system';
 
 module.exports = function (homebridge) {
   Accessory = homebridge.platformAccessory;
@@ -18,7 +18,7 @@ module.exports = function (homebridge) {
 
   class SprinklerPlatform {
     constructor(log, config, api) {
-      this.name = "OpenSprinkler"
+      this.name = PLATFORM_NAME
       this.log = log;
       this.api = api;
 

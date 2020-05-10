@@ -1,8 +1,10 @@
-This is based off of the [homebridge-opensprinkler](http://github.com/timcharper/homebridge-opensprinkler) plugin originally created by Tim Charper.
+This is based off of the [homebridge-opensprinkler](http://github.com/timcharper/homebridge-opensprinkler) plugin originally created by Tim Charper used under the ISC license.
 
 # OpenSprinkler
 
-"Hey Siri, turn off my sprinklers"
+"Hey Siri, turn off my sprinklers."
+
+"Hey Siri, are the Back Patio sprinklers on?"
 
 ## Overview
 
@@ -26,28 +28,28 @@ Simple OpenSprinkler / Homebridge integration.
 
 ## Installation
 
-You must have NodeJS `v8.1.4` or later installed as `homebridge-opensprinkler` depends on JavaScript features introduced at that point. Check your node version:
+You must have NodeJS `v10.17.0` or later. Check your node version:
 
-```
+```shell script
 node --version
 ```
 
-You need [Homebridge](https://github.com/nfarina/homebridge) installed and configured. This plugin was developed against Homebridge `0.4.43`.
+You need [Homebridge](https://github.com/nfarina/homebridge) installed and configured. This plugin was developed against Homebridge `1.0.0`.
 
-```
+```shell script
 npm install -g homebridge
 ```
 
 Install this plug-in:
 
-```
-npm install -g homebridge-opensprinkler
+```shell script
+npm install -g homebridge-opensprinkler-system
 ```
 
 Updating:
 
-```
-npm update -g homebridge-opensprinkler
+```shell script
+npm update -g homebridge-opensprinkler-system
 ```
 
 Add the section below to your homebridge `platforms` section.
@@ -56,21 +58,18 @@ Add the section below to your homebridge `platforms` section.
 
 - `host`: The IP or DNS name of the OpenSprinkler controller
 - `password`: Either the md5 hash of the password, or the password in plain text. I.E. `{"md5": "a6d82bced638de3def1e9bbb4983225c"}` or `{"plain": "opendoor"}`
-- `enabledStationIds`: The stationIds you wish to have registered.
 - `defaultDurationSecs`: The duration for which a station will be run when toggled on.
 - `pollIntervalMs`: The interval at which homebridge-opensprinkler will poll for state changes in OpenSprinkler.
 
 Sample configuration:
 
-```
+```json
 {
   "platform": "OpenSprinkler",
   "host": "sprinkler.lan",
   "password": {"md5": "a6d82bced638de3def1e9bbb4983225c"},
-  "enabledStationIds": [0, 1, 2, 3],
   "defaultDurationSecs": 600,
   "pollIntervalMs": 5000
 }
 ```
-
 

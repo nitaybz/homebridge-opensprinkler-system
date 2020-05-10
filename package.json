@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-opensprinkler",
+  "name": "homebridge-opensprinkler-system",
   "displayName": "Open Sprinkler",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Control OpenSprinkler with Homebridge",
   "license": "ISC",
   "author": "Aaron Kampmeier <aaron.kampmeier@gmail.com>",
@@ -10,21 +10,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/timcharper/homebridge-opensprinkler.git"
+    "url": "git://github.com/aaronkampmeier/homebridge-opensprinkler-system.git"
   },
   "bugs": {
-    "url": "http://github.com/timcharper/homebridge-opensprinkler/issues"
+    "url": "https://github.com/aaronkampmeier/homebridge-opensprinkler-system/issues"
   },
   "engines": {
-    "node": ">=8.1.4",
-    "homebridge": ">=0.4.0"
+    "node": ">=10.17.0",
+    "homebridge": ">=1.0.0"
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/**.ts",
+    "lint": "eslint index.js lib/**.js",
     "watch": "npm run build && npm link && nodemon",
     "build": "rimraf ./dist && tsc",
-    "prepublishOnly": "npm run lint && npm run build"
+    "prepublishOnly-old": "npm run lint && npm run build"
   },
   "dependencies": {
     "promise.prototype.finally": "^3.1.0",
